@@ -1,0 +1,83 @@
+<!--
+index.html
+GUI Assignment: HW5 Scrabble
+
+This is my index file for the general layout of the scrabble board and rack.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HW5 - Scrabble Game (Drag & Drop)</title>
+
+  <!-- jQuery + jQuery UI (allowed by assignment: use jQuery UI docs/examples) -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar__left">
+      <h1>Scrabble Game</h1>
+      <p class="subtitle">Drag tiles from the rack to the board to make a contiguous word.</p>
+    </div>
+
+    <div class="topbar__right">
+      <div class="stat">
+        <div class="stat__label">Current Word</div>
+        <div class="stat__value" id="currentWord">—</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">Word Score</div>
+        <div class="stat__value" id="currentScore">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">Total Score</div>
+        <div class="stat__value" id="totalScore">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">Tiles Remaining</div>
+        <div class="stat__value" id="tilesRemaining">100</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h2 class="panel__title">Board</h2>
+      <div id="board" aria-label="Scrabble board row">
+        <div id="boardGrid" aria-hidden="true"></div>
+      </div>
+
+      <div class="legend">
+        <span class="chip chip--dw">DW</span> double word
+        <span class="chip chip--dl">DL</span> double letter
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel__title">Rack</h2>
+      <div id="rack" aria-label="Tile rack">
+        <div id="rackGrid" aria-hidden="true"></div>
+      </div>
+
+      <div class="controls">
+        <button id="btnSubmit" class="btn btn--primary">Submit Word</button>
+        <button id="btnClear" class="btn">Clear Board</button>
+        <button id="btnRestart" class="btn btn--danger">Restart Game</button>
+      </div>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="tiles/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+<p>Made by Kevin Tran</p>
