@@ -1,6 +1,6 @@
 https://github.com/goro788/gui_hw5_repo
 
-
+https://goro788.github.io/gui_hw5_repo/
 
 # HW5 - Scrabble (Drag & Drop)
 
@@ -8,9 +8,6 @@ https://github.com/goro788/gui_hw5_repo
 - Name: Kevin Tran
 - Course: COMP 4610 GUI I
 
-## GitHub
-- GitHub Pages URL: (paste your deployed URL here)
-- Repository URL: (paste your repo URL here)
 
 ## Implemented Features / Status
 -  One-line board with bonus squares (DW + DL)
